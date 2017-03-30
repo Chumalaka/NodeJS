@@ -1,9 +1,6 @@
 var bodyParser = require('body-parser');
 
 var urlencodedParser = bodyParser.urlencoded({ extended: true});
-//var jsonParser = bodyParser.json();
-
-//var dbController = require('./dbController');
 var Contact = require('../models/contactModel');
 
 module.exports = function(app) {
@@ -32,13 +29,5 @@ module.exports = function(app) {
         });
     
     });
-
-        /*res.send('<html><head><link href=../assets/style.css type=text/css rel=stylesheet /></head><body><h1>Person: ' + req.params.id + '</h1></body></html>')*/
-    //});
-
-    app.post('/person', urlencodedParser, function(req, res) {
-        res.send('Thank you!!');
-        console.log(req.body.firstname);
-        console.log(req.body.lastname);
-    });
+	
 };
