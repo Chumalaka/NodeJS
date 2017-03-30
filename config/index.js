@@ -1,0 +1,8 @@
+var configValues = require('./config');
+
+module.exports = {
+
+    getDbConnectionString: function() {
+        return 'mongodb://' + configValues.uname + ':' + configValues.pwd + '@ds141960.mlab.com:41960/adressbook';
+    }
+}
